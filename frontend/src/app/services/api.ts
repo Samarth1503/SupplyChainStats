@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { CustomerLevel, Destination, Shipment, Stats, Tariff } from '../models';
 
 // Address of the Express API (see backend/server.js).
-const API_URL = 'https://supplychainstats.onrender.com/api';
+const API_URL = 'https://supplychainstats-be.onrender.com/api';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
