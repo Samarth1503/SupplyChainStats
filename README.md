@@ -41,3 +41,11 @@ npm run build
 npm run serve:ssr:frontend
 ```
 *The production frontend will run on `http://localhost:4000`. You can view the raw page source in your browser to see the data rendered directly in the HTML!*
+
+
+# Screenshots of the UI
+
+<img width="1917" height="772" alt="image" src="https://github.com/user-attachments/assets/c1f0a15f-63ed-4f5a-a6c5-f759c579ce8f" />
+<img width="1912" height="990" alt="image" src="https://github.com/user-attachments/assets/09844551-fff9-4690-853b-997453a4512d" />
+<img width="1918" height="875" alt="image" src="https://github.com/user-attachments/assets/89af1eb1-326f-4a5a-aa5b-c0c2f46f6b32" />
+
