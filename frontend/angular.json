@@ -31,8 +31,10 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
+              "trustProxyHeaders": true,
               "allowedHosts": [
-                "localhost"
+                "localhost",
+                ".*\\.onrender\\.com"
               ]
             },
             "ssr": {
