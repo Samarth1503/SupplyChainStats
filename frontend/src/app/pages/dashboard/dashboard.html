@@ -1,0 +1,143 @@
+@if (errorMessage()) {
+  <div class="message error" role="alert" animate.enter="fade-in">
+    <span>{{ errorMessage() }}</span>
+    <button type="button" class="btn" (click)="tryAgain()">Try again</button>
+  </div>
+}
+
+<div class="layout">
+  <section class="card scoreboard">
+    <header class="card-header">
+      <h1 class="card-title"><span class="live-dot"></span>Online postal scoreboard</h1>
+
+      @if (destinations().length > 0) {
+        <label class="destination">
+          <span class="code-badge">{{ selectedCode() }}</span>
+          <select aria-label="Destination country" (change)="onDestinationChange($event)">
+            @for (destination of destinations(); track destination.country) {
+              <option [value]="destination.country" [selected]="destination.country === selectedCountry()">
+                To {{ destination.country }}
+              </option>
+            }
+          </select>
+        </label>
+      }
+    </header>
+
+    @if (loading()) {
+      <p class="loading">Loading shipments…</p>
+    } @else if (shipments() !== null) {
+      <div class="tables">
+        @for (table of tables(); track table.mode) {
+          <section class="mode-table">
+            <h2 class="mode-title"><span aria-hidden="true">{{ table.icon }}</span> {{ table.mode }}</h2>
+
+            @if (table.rows.length === 0) {
+              <p class="message" animate.enter="fade-in">
+                No {{ table.mode.toLowerCase() }} shipments to this destination.
+              </p>
+            } @else {
+              <table>
+                <thead>
+                  <tr>
+                    <th>China</th>
+                    <th>{{ selectedCity() }}</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (shipment of table.rows; track shipment.id; let i = $index) {
+                    <tr class="row" animate.leave="row-out" [style.--i]="i">
+                      <td>
+                        {{ shipment.departureDate | date: 'dd.MM' }}
+                        <span class="arrow" aria-hidden="true">→</span>
+                      </td>
+                      <td>{{ shipment.arrivalDate | date: 'dd.MM' }}</td>
+                      <td>
+                        <span class="status" [attr.data-status]="shipment.status">{{ shipment.status }}</span>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </section>
+        }
+      </div>
+
+      @if (canShowAll()) {
+        <div class="more">
+          <button type="button" class="btn" (click)="toggleShowAll()">
+            {{ showAll() ? 'Show less' : 'All schedule' }}
+          </button>
+        </div>
+      }
+    }
+  </section>
+
+  <aside class="card level-card">
+    @if (level(); as currentLevel) {
+      <div class="level-top">
+        <span class="muted">Your level</span>
+        <span class="valid">valid until {{ currentLevel.validUntil | date: 'dd.MM.yyyy' }}</span>
+      </div>
+      <p class="level-name"><span aria-hidden="true">🏅</span> {{ currentLevel.levelName }}</p>
+    } @else {
+      <p class="muted">Level information is not available.</p>
+    }
+
+    <h3 class="block-title">Tariffs <span aria-hidden="true">→</span></h3>
+    @if (tariff(); as currentTariff) {
+      <div class="pair">
+        <div>
+          <span class="muted">Plane</span>
+          <strong class="price">${{ currentTariff.planePerKg }}<small>/kg</small></strong>
+        </div>
+        <div>
+          <span class="muted">Ferry</span>
+          @if (currentTariff.ferryPerKg !== null) {
+            <strong class="price">${{ currentTariff.ferryPerKg }}<small>/kg</small></strong>
+          } @else {
+            <strong class="price not-available">Not available</strong>
+          }
+        </div>
+      </div>
+    } @else {
+      <p class="muted">{{ loading() ? 'Loading…' : 'Not available.' }}</p>
+    }
+
+    @if (level(); as currentLevel) {
+      <h3 class="block-title">Service fee <span aria-hidden="true">→</span></h3>
+      <div class="pair">
+        <div>
+          <span class="muted">Friend's payment</span>
+          <strong class="price">{{ currentLevel.friendPaymentPercent }}%</strong>
+        </div>
+        <div>
+          <span class="muted">Redemption</span>
+          <strong class="price">{{ currentLevel.redemptionPercent }}%</strong>
+        </div>
+      </div>
+
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Progress to keep your level"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        [attr.aria-valuenow]="progressPercent()"
+      >
+        <div class="progress-bar" [style.width.%]="progressPercent()"></div>
+      </div>
+
+      @if (kgToGo() > 0) {
+        <p class="progress-text">
+          To extend the {{ currentLevel.levelName }} level buy another
+          <strong>{{ kgToGo() }} kg</strong> before {{ currentLevel.renewalDeadline | date: 'dd.MM.yyyy' }}
+        </p>
+      } @else {
+        <p class="progress-text">Level secured. You have bought enough to keep the {{ currentLevel.levelName }} level.</p>
+      }
+    }
+  </aside>
+</div>

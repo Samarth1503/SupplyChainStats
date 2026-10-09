@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+.kpis {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  margin-bottom: 22px;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation-delay: var(--delay, 0ms);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kpi:hover {
+  transform: translateY(-3px);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.kpi-value {
+  font-size: 1.9rem;
+  color: var(--accent-dark);
+}
+
+.kpi-value.small {
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.charts {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.chart h2 {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.bar-track {
+  height: 12px;
+  border-radius: 999px;
+  background: #edf1f5;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  animation: grow-bar 0.9s ease-out both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+.bar-fill[data-bar='Arrived'] {
+  background: var(--arrived);
+}
+
+.bar-fill[data-bar='In transit'] {
+  background: var(--transit);
+}
+
+.bar-fill[data-bar='Scheduled'] {
+  background: var(--scheduled);
+}
+
+.bar-value {
+  text-align: right;
+  font-weight: 700;
+}
+
+@keyframes grow-bar {
+  from {
+    width: 0;
+  }
+}

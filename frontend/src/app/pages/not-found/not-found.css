@@ -1,0 +1,22 @@
+.not-found {
+  max-width: 520px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.code {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.hint {
+  color: var(--muted);
+  margin: 8px 0 22px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+}
