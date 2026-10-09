@@ -1,0 +1,892 @@
+{
+  "meta": {
+    "asOfDate": "2026-10-09",
+    "origin": "China",
+    "currency": "USD"
+  },
+  "destinations": [
+    {
+      "country": "England",
+      "city": "London",
+      "code": "GB"
+    },
+    {
+      "country": "Germany",
+      "city": "Hamburg",
+      "code": "DE"
+    },
+    {
+      "country": "USA",
+      "city": "New York",
+      "code": "US"
+    },
+    {
+      "country": "Australia",
+      "city": "Sydney",
+      "code": "AU"
+    },
+    {
+      "country": "Japan",
+      "city": "Tokyo",
+      "code": "JP"
+    }
+  ],
+  "tariffs": [
+    {
+      "destinationCountry": "England",
+      "planePerKg": 14,
+      "ferryPerKg": 4.7
+    },
+    {
+      "destinationCountry": "Germany",
+      "planePerKg": 12,
+      "ferryPerKg": 4.2
+    },
+    {
+      "destinationCountry": "USA",
+      "planePerKg": 18,
+      "ferryPerKg": 5.5
+    },
+    {
+      "destinationCountry": "Australia",
+      "planePerKg": 20,
+      "ferryPerKg": 6.1
+    },
+    {
+      "destinationCountry": "Japan",
+      "planePerKg": 11,
+      "ferryPerKg": null
+    }
+  ],
+  "shipments": [
+    {
+      "id": "SH-1001",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-08-20",
+      "arrivalDate": "2026-08-22",
+      "status": "Arrived",
+      "weightKg": 5,
+      "costUsd": 70
+    },
+    {
+      "id": "SH-1002",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-08-29",
+      "arrivalDate": "2026-09-01",
+      "status": "Arrived",
+      "weightKg": 12.5,
+      "costUsd": 175
+    },
+    {
+      "id": "SH-1003",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-09-07",
+      "arrivalDate": "2026-09-09",
+      "status": "Arrived",
+      "weightKg": 19,
+      "costUsd": 266
+    },
+    {
+      "id": "SH-1004",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-09-16",
+      "arrivalDate": "2026-09-19",
+      "status": "Arrived",
+      "weightKg": 26.5,
+      "costUsd": 371
+    },
+    {
+      "id": "SH-1005",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-09-25",
+      "arrivalDate": "2026-09-27",
+      "status": "Arrived",
+      "weightKg": 33,
+      "costUsd": 462
+    },
+    {
+      "id": "SH-1006",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-04",
+      "arrivalDate": "2026-10-07",
+      "status": "Arrived",
+      "weightKg": 40.5,
+      "costUsd": 567
+    },
+    {
+      "id": "SH-1007",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-10",
+      "status": "In transit",
+      "weightKg": 7,
+      "costUsd": 98
+    },
+    {
+      "id": "SH-1008",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-09",
+      "arrivalDate": "2026-10-12",
+      "status": "In transit",
+      "weightKg": 14.5,
+      "costUsd": 203
+    },
+    {
+      "id": "SH-1009",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-14",
+      "arrivalDate": "2026-10-16",
+      "status": "Scheduled",
+      "weightKg": 21,
+      "costUsd": 294
+    },
+    {
+      "id": "SH-1010",
+      "mode": "Plane",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-21",
+      "arrivalDate": "2026-10-24",
+      "status": "Scheduled",
+      "weightKg": 28.5,
+      "costUsd": 399
+    },
+    {
+      "id": "SH-1011",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-07-31",
+      "arrivalDate": "2026-08-18",
+      "status": "Arrived",
+      "weightKg": 39,
+      "costUsd": 183.3
+    },
+    {
+      "id": "SH-1012",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-08-15",
+      "arrivalDate": "2026-09-05",
+      "status": "Arrived",
+      "weightKg": 61.5,
+      "costUsd": 289.05
+    },
+    {
+      "id": "SH-1013",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-08-30",
+      "arrivalDate": "2026-09-23",
+      "status": "Arrived",
+      "weightKg": 81,
+      "costUsd": 380.7
+    },
+    {
+      "id": "SH-1014",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-09-09",
+      "arrivalDate": "2026-10-06",
+      "status": "Arrived",
+      "weightKg": 103.5,
+      "costUsd": 486.45
+    },
+    {
+      "id": "SH-1015",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-09-27",
+      "arrivalDate": "2026-10-16",
+      "status": "In transit",
+      "weightKg": 123,
+      "costUsd": 578.1
+    },
+    {
+      "id": "SH-1016",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-06",
+      "arrivalDate": "2026-10-28",
+      "status": "In transit",
+      "weightKg": 25.5,
+      "costUsd": 119.85
+    },
+    {
+      "id": "SH-1017",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-15",
+      "arrivalDate": "2026-11-09",
+      "status": "Scheduled",
+      "weightKg": 45,
+      "costUsd": 211.5
+    },
+    {
+      "id": "SH-1018",
+      "mode": "Ferry",
+      "destinationCountry": "England",
+      "departureDate": "2026-10-25",
+      "arrivalDate": "2026-11-22",
+      "status": "Scheduled",
+      "weightKg": 67.5,
+      "costUsd": 317.25
+    },
+    {
+      "id": "SH-1019",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-08-22",
+      "arrivalDate": "2026-08-25",
+      "status": "Arrived",
+      "weightKg": 18,
+      "costUsd": 216
+    },
+    {
+      "id": "SH-1020",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-08-31",
+      "arrivalDate": "2026-09-02",
+      "status": "Arrived",
+      "weightKg": 25.5,
+      "costUsd": 306
+    },
+    {
+      "id": "SH-1021",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-09-09",
+      "arrivalDate": "2026-09-12",
+      "status": "Arrived",
+      "weightKg": 32,
+      "costUsd": 384
+    },
+    {
+      "id": "SH-1022",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-09-18",
+      "arrivalDate": "2026-09-20",
+      "status": "Arrived",
+      "weightKg": 39.5,
+      "costUsd": 474
+    },
+    {
+      "id": "SH-1023",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-09-27",
+      "arrivalDate": "2026-09-30",
+      "status": "Arrived",
+      "weightKg": 6,
+      "costUsd": 72
+    },
+    {
+      "id": "SH-1024",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-04",
+      "arrivalDate": "2026-10-06",
+      "status": "Arrived",
+      "weightKg": 13.5,
+      "costUsd": 162
+    },
+    {
+      "id": "SH-1025",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-11",
+      "status": "In transit",
+      "weightKg": 20,
+      "costUsd": 240
+    },
+    {
+      "id": "SH-1026",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-09",
+      "arrivalDate": "2026-10-11",
+      "status": "In transit",
+      "weightKg": 27.5,
+      "costUsd": 330
+    },
+    {
+      "id": "SH-1027",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-14",
+      "arrivalDate": "2026-10-17",
+      "status": "Scheduled",
+      "weightKg": 34,
+      "costUsd": 408
+    },
+    {
+      "id": "SH-1028",
+      "mode": "Plane",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-21",
+      "arrivalDate": "2026-10-23",
+      "status": "Scheduled",
+      "weightKg": 41.5,
+      "costUsd": 498
+    },
+    {
+      "id": "SH-1029",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-07-31",
+      "arrivalDate": "2026-08-20",
+      "status": "Arrived",
+      "weightKg": 78,
+      "costUsd": 327.6
+    },
+    {
+      "id": "SH-1030",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-08-15",
+      "arrivalDate": "2026-09-07",
+      "status": "Arrived",
+      "weightKg": 100.5,
+      "costUsd": 422.1
+    },
+    {
+      "id": "SH-1031",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-08-30",
+      "arrivalDate": "2026-09-25",
+      "status": "Arrived",
+      "weightKg": 120,
+      "costUsd": 504
+    },
+    {
+      "id": "SH-1032",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-09-09",
+      "arrivalDate": "2026-09-27",
+      "status": "Arrived",
+      "weightKg": 22.5,
+      "costUsd": 94.5
+    },
+    {
+      "id": "SH-1033",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-09-27",
+      "arrivalDate": "2026-10-18",
+      "status": "In transit",
+      "weightKg": 42,
+      "costUsd": 176.4
+    },
+    {
+      "id": "SH-1034",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-06",
+      "arrivalDate": "2026-10-30",
+      "status": "In transit",
+      "weightKg": 64.5,
+      "costUsd": 270.9
+    },
+    {
+      "id": "SH-1035",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-15",
+      "arrivalDate": "2026-11-11",
+      "status": "Scheduled",
+      "weightKg": 84,
+      "costUsd": 352.8
+    },
+    {
+      "id": "SH-1036",
+      "mode": "Ferry",
+      "destinationCountry": "Germany",
+      "departureDate": "2026-10-25",
+      "arrivalDate": "2026-11-13",
+      "status": "Scheduled",
+      "weightKg": 106.5,
+      "costUsd": 447.3
+    },
+    {
+      "id": "SH-1037",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-08-24",
+      "arrivalDate": "2026-08-26",
+      "status": "Arrived",
+      "weightKg": 31,
+      "costUsd": 558
+    },
+    {
+      "id": "SH-1038",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-02",
+      "arrivalDate": "2026-09-05",
+      "status": "Arrived",
+      "weightKg": 38.5,
+      "costUsd": 693
+    },
+    {
+      "id": "SH-1039",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-11",
+      "arrivalDate": "2026-09-13",
+      "status": "Arrived",
+      "weightKg": 5,
+      "costUsd": 90
+    },
+    {
+      "id": "SH-1040",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-20",
+      "arrivalDate": "2026-09-23",
+      "status": "Arrived",
+      "weightKg": 12.5,
+      "costUsd": 225
+    },
+    {
+      "id": "SH-1041",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-29",
+      "arrivalDate": "2026-10-01",
+      "status": "Arrived",
+      "weightKg": 19,
+      "costUsd": 342
+    },
+    {
+      "id": "SH-1042",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-04",
+      "arrivalDate": "2026-10-07",
+      "status": "Arrived",
+      "weightKg": 26.5,
+      "costUsd": 477
+    },
+    {
+      "id": "SH-1043",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-10",
+      "status": "In transit",
+      "weightKg": 33,
+      "costUsd": 594
+    },
+    {
+      "id": "SH-1044",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-09",
+      "arrivalDate": "2026-10-12",
+      "status": "In transit",
+      "weightKg": 40.5,
+      "costUsd": 729
+    },
+    {
+      "id": "SH-1045",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-14",
+      "arrivalDate": "2026-10-16",
+      "status": "Scheduled",
+      "weightKg": 7,
+      "costUsd": 126
+    },
+    {
+      "id": "SH-1046",
+      "mode": "Plane",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-21",
+      "arrivalDate": "2026-10-24",
+      "status": "Scheduled",
+      "weightKg": 14.5,
+      "costUsd": 261
+    },
+    {
+      "id": "SH-1047",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-07-31",
+      "arrivalDate": "2026-08-22",
+      "status": "Arrived",
+      "weightKg": 117,
+      "costUsd": 643.5
+    },
+    {
+      "id": "SH-1048",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-08-15",
+      "arrivalDate": "2026-09-09",
+      "status": "Arrived",
+      "weightKg": 19.5,
+      "costUsd": 107.25
+    },
+    {
+      "id": "SH-1049",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-08-30",
+      "arrivalDate": "2026-09-27",
+      "status": "Arrived",
+      "weightKg": 39,
+      "costUsd": 214.5
+    },
+    {
+      "id": "SH-1050",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-09",
+      "arrivalDate": "2026-09-29",
+      "status": "Arrived",
+      "weightKg": 61.5,
+      "costUsd": 338.25
+    },
+    {
+      "id": "SH-1051",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-09-27",
+      "arrivalDate": "2026-10-20",
+      "status": "In transit",
+      "weightKg": 81,
+      "costUsd": 445.5
+    },
+    {
+      "id": "SH-1052",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-06",
+      "arrivalDate": "2026-11-01",
+      "status": "In transit",
+      "weightKg": 103.5,
+      "costUsd": 569.25
+    },
+    {
+      "id": "SH-1053",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-15",
+      "arrivalDate": "2026-11-02",
+      "status": "Scheduled",
+      "weightKg": 123,
+      "costUsd": 676.5
+    },
+    {
+      "id": "SH-1054",
+      "mode": "Ferry",
+      "destinationCountry": "USA",
+      "departureDate": "2026-10-25",
+      "arrivalDate": "2026-11-15",
+      "status": "Scheduled",
+      "weightKg": 25.5,
+      "costUsd": 140.25
+    },
+    {
+      "id": "SH-1055",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-08-26",
+      "arrivalDate": "2026-08-29",
+      "status": "Arrived",
+      "weightKg": 4,
+      "costUsd": 80
+    },
+    {
+      "id": "SH-1056",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-09-04",
+      "arrivalDate": "2026-09-06",
+      "status": "Arrived",
+      "weightKg": 11.5,
+      "costUsd": 230
+    },
+    {
+      "id": "SH-1057",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-09-13",
+      "arrivalDate": "2026-09-16",
+      "status": "Arrived",
+      "weightKg": 18,
+      "costUsd": 360
+    },
+    {
+      "id": "SH-1058",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-09-22",
+      "arrivalDate": "2026-09-24",
+      "status": "Arrived",
+      "weightKg": 25.5,
+      "costUsd": 510
+    },
+    {
+      "id": "SH-1059",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-01",
+      "arrivalDate": "2026-10-04",
+      "status": "Arrived",
+      "weightKg": 32,
+      "costUsd": 640
+    },
+    {
+      "id": "SH-1060",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-04",
+      "arrivalDate": "2026-10-06",
+      "status": "Arrived",
+      "weightKg": 39.5,
+      "costUsd": 790
+    },
+    {
+      "id": "SH-1061",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-11",
+      "status": "In transit",
+      "weightKg": 6,
+      "costUsd": 120
+    },
+    {
+      "id": "SH-1062",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-09",
+      "arrivalDate": "2026-10-11",
+      "status": "In transit",
+      "weightKg": 13.5,
+      "costUsd": 270
+    },
+    {
+      "id": "SH-1063",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-14",
+      "arrivalDate": "2026-10-17",
+      "status": "Scheduled",
+      "weightKg": 20,
+      "costUsd": 400
+    },
+    {
+      "id": "SH-1064",
+      "mode": "Plane",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-21",
+      "arrivalDate": "2026-10-23",
+      "status": "Scheduled",
+      "weightKg": 27.5,
+      "costUsd": 550
+    },
+    {
+      "id": "SH-1065",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-07-31",
+      "arrivalDate": "2026-08-24",
+      "status": "Arrived",
+      "weightKg": 36,
+      "costUsd": 219.6
+    },
+    {
+      "id": "SH-1066",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-08-15",
+      "arrivalDate": "2026-09-11",
+      "status": "Arrived",
+      "weightKg": 58.5,
+      "costUsd": 356.85
+    },
+    {
+      "id": "SH-1067",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-08-30",
+      "arrivalDate": "2026-09-18",
+      "status": "Arrived",
+      "weightKg": 78,
+      "costUsd": 475.8
+    },
+    {
+      "id": "SH-1068",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-09-09",
+      "arrivalDate": "2026-10-01",
+      "status": "Arrived",
+      "weightKg": 100.5,
+      "costUsd": 613.05
+    },
+    {
+      "id": "SH-1069",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-09-27",
+      "arrivalDate": "2026-10-22",
+      "status": "In transit",
+      "weightKg": 120,
+      "costUsd": 732
+    },
+    {
+      "id": "SH-1070",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-06",
+      "arrivalDate": "2026-11-03",
+      "status": "In transit",
+      "weightKg": 22.5,
+      "costUsd": 137.25
+    },
+    {
+      "id": "SH-1071",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-15",
+      "arrivalDate": "2026-11-04",
+      "status": "Scheduled",
+      "weightKg": 42,
+      "costUsd": 256.2
+    },
+    {
+      "id": "SH-1072",
+      "mode": "Ferry",
+      "destinationCountry": "Australia",
+      "departureDate": "2026-10-25",
+      "arrivalDate": "2026-11-17",
+      "status": "Scheduled",
+      "weightKg": 64.5,
+      "costUsd": 393.45
+    },
+    {
+      "id": "SH-1073",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-08-28",
+      "arrivalDate": "2026-08-30",
+      "status": "Arrived",
+      "weightKg": 17,
+      "costUsd": 187
+    },
+    {
+      "id": "SH-1074",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-09-06",
+      "arrivalDate": "2026-09-09",
+      "status": "Arrived",
+      "weightKg": 24.5,
+      "costUsd": 269.5
+    },
+    {
+      "id": "SH-1075",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-09-15",
+      "arrivalDate": "2026-09-17",
+      "status": "Arrived",
+      "weightKg": 31,
+      "costUsd": 341
+    },
+    {
+      "id": "SH-1076",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-09-24",
+      "arrivalDate": "2026-09-27",
+      "status": "Arrived",
+      "weightKg": 38.5,
+      "costUsd": 423.5
+    },
+    {
+      "id": "SH-1077",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-03",
+      "arrivalDate": "2026-10-05",
+      "status": "Arrived",
+      "weightKg": 5,
+      "costUsd": 55
+    },
+    {
+      "id": "SH-1078",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-04",
+      "arrivalDate": "2026-10-07",
+      "status": "Arrived",
+      "weightKg": 12.5,
+      "costUsd": 137.5
+    },
+    {
+      "id": "SH-1079",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-10",
+      "status": "In transit",
+      "weightKg": 19,
+      "costUsd": 209
+    },
+    {
+      "id": "SH-1080",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-09",
+      "arrivalDate": "2026-10-12",
+      "status": "In transit",
+      "weightKg": 26.5,
+      "costUsd": 291.5
+    },
+    {
+      "id": "SH-1081",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-14",
+      "arrivalDate": "2026-10-16",
+      "status": "Scheduled",
+      "weightKg": 33,
+      "costUsd": 363
+    },
+    {
+      "id": "SH-1082",
+      "mode": "Plane",
+      "destinationCountry": "Japan",
+      "departureDate": "2026-10-21",
+      "arrivalDate": "2026-10-24",
+      "status": "Scheduled",
+      "weightKg": 40.5,
+      "costUsd": 445.5
+    }
+  ],
+  "customerLevel": {
+    "levelName": "Gold",
+    "validUntil": "2026-12-31",
+    "friendPaymentPercent": 5,
+    "redemptionPercent": 10,
+    "kgBought": 70,
+    "kgRequiredForRenewal": 100,
+    "renewalDeadline": "2026-12-31"
+  }
+}
