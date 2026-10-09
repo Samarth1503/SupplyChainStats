@@ -33,7 +33,7 @@
             "security": {
               "allowedHosts": [
                 "localhost",
-                ".*\\.onrender\\.com"
+                "supplychainstats-fe.onrender.com"
               ]
             },
             "ssr": {
