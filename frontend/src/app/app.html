@@ -1,0 +1,14 @@
+<header class="top-bar">
+  <a class="brand" routerLink="/">
+    <span class="brand-mark">📦</span>
+    <span>SupplyChain<strong>Stats</strong></span>
+  </a>
+  <nav class="nav" aria-label="Main navigation">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <a routerLink="/analytics" routerLinkActive="active">Analytics</a>
+  </nav>
+</header>
+
+<main class="page">
+  <router-outlet />
+</main>

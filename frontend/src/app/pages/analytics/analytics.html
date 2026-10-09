@@ -1,0 +1,62 @@
+<h1 class="page-title">Analytics</h1>
+
+@if (errorMessage()) {
+  <div class="message error" role="alert" animate.enter="fade-in">
+    <span>{{ errorMessage() }}</span>
+    <button type="button" class="btn" (click)="load()">Try again</button>
+  </div>
+}
+
+@if (loading()) {
+  <p class="loading">Loading statistics…</p>
+} @else if (stats(); as currentStats) {
+  @if (currentStats.totalShipments === 0) {
+    <p class="message" animate.enter="fade-in">No data to show yet.</p>
+  } @else {
+    <div class="kpis">
+      <article class="card kpi" style="--delay: 0ms">
+        <span class="muted">Total shipments</span>
+        <strong class="kpi-value">{{ currentStats.totalShipments }}</strong>
+      </article>
+      <article class="card kpi" style="--delay: 80ms">
+        <span class="muted">Total weight</span>
+        <strong class="kpi-value">{{ currentStats.totalWeightKg | number: '1.0-1' }} kg</strong>
+      </article>
+      <article class="card kpi" style="--delay: 160ms">
+        <span class="muted">Revenue</span>
+        <strong class="kpi-value">${{ currentStats.totalRevenueUsd | number: '1.0-0' }}</strong>
+      </article>
+      <article class="card kpi" style="--delay: 240ms">
+        <span class="muted">Average transit time</span>
+        <strong class="kpi-value small">
+          ✈️ {{ currentStats.byMode.Plane.avgTransitDays }} days
+        </strong>
+        <strong class="kpi-value small">
+          🚢 {{ currentStats.byMode.Ferry.avgTransitDays }} days
+        </strong>
+      </article>
+    </div>
+
+    <div class="charts">
+      @for (chart of charts(); track chart.title) {
+        <section class="card chart">
+          <h2>{{ chart.title }}</h2>
+          @for (bar of chart.bars; track bar.label; let i = $index) {
+            <div class="bar-row">
+              <span class="bar-label">{{ bar.label }}</span>
+              <div class="bar-track">
+                <div
+                  class="bar-fill"
+                  [attr.data-bar]="bar.label"
+                  [style.width.%]="bar.percent"
+                  [style.--i]="i"
+                ></div>
+              </div>
+              <span class="bar-value">{{ bar.value }}</span>
+            </div>
+          }
+        </section>
+      }
+    </div>
+  }
+}

@@ -1,0 +1,130 @@
+/* Global look: colours, reset, and the small building blocks used by several pages. */
+:root {
+  --bg: #F0FAFA;
+  --card: #ffffff;
+  --text: #233532;
+  --muted: #82928F;
+  --border: #E4EEED;
+  --accent: #35CCC4;
+  --accent-dark: #23A9A2;
+  --accent-soft: #DFF5F3;
+  --arrived: #35CCC4;
+  --transit: #EAA842;
+  --scheduled: #9DAEAB;
+  --danger: #D84E4E;
+  --gold: #F5C230;
+  --radius: 18px;
+  --shadow: 0 6px 24px rgba(35, 53, 50, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+  animation: card-in 0.6s ease-out both;
+}
+
+.btn {
+  border: 1px solid var(--accent);
+  background: #fff;
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 8px 22px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+.message.error {
+  background: #fdecea;
+  color: var(--danger);
+  margin-bottom: 18px;
+}
+
+.message .btn {
+  padding: 4px 16px;
+}
+
+.loading {
+  color: var(--muted);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Visitors who ask their system for less motion get (almost) no animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
